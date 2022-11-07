@@ -14,9 +14,10 @@ h1,h2,h7{
     padding-bottom: 1rem;
 }
 .home-elem{
-    display: grid;
-    grid-template-rows: auto 1rem;
-    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
 }
 .link-btn{
     text-decoration: none;
@@ -31,4 +32,11 @@ h1,h2,h7{
     justify-content: flex-start;
     align-items: center;
     gap: 4rem;
+}
+
+.footer{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

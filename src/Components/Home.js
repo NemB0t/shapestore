@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import Footer from './Footer';
 import './Home.css'
 
 
@@ -14,7 +13,6 @@ function Home() {
           </div>
           <Link to="/store" className='link-btn'>Go to Store</Link>
         </div>
-        <Footer/>
       </div>
     );
   }

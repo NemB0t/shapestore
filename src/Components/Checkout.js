@@ -1,6 +1,8 @@
+import './Checkout.css'
+
 function Checkout() {
     return (
-      <div className="">
+      <div className="Checkout">
         Checkout
       </div>
     );

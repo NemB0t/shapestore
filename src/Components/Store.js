@@ -1,6 +1,8 @@
+import './Store.css'
+
 function Store() {
     return (
-      <div className="">
+      <div className="Store">
         Store
       </div>
     );
