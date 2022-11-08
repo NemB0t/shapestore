@@ -1,0 +1,20 @@
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+    }
+    
+
+.square {
+    width: 100px;
+    height: 100px;
+    background: red;
+  }
+    
+  .shape{
+    height: 150px;
+    width: 150px;
+}
