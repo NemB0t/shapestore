@@ -1,15 +1,15 @@
-import './Navi.css';
+// import './Navi.css';
 import { Link } from "react-router-dom";
 
 function Navi() {
     return (
-    <nav>
-        <li><Link to="/" className='link-tag'>ShapeStore</Link></li>
+    <nav className="flex-initial flex justify-between items-center p-12">
+        <Link to="/" className='no-underline'>ShapeStore</Link>
 
-        <ul>
-            <li><Link to="/" className='link-tag'>Home</Link></li>
-            <li><Link to="/store" className='link-tag'>Store</Link></li>
-            <li><Link to="/checkout" className='link-tag'>Checkout</Link></li>
+        <ul className="flex justify-center items-center gap-12">
+            <li className="list-none"><Link to="/" className='no-underline'>Home</Link></li>
+            <li className="list-none"><Link to="/store" className='no-underline'>Store</Link></li>
+            <li className="list-none"><Link to="/checkout" className='no-underline'>Checkout</Link></li>
         </ul>
     </nav>
     );

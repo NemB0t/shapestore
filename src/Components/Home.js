@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import './Home.css'
+// import './Home.css'
 
 
 function Home() {
     return (
-      <div className='home-elem'>
+      <div className=''>
         <div className='home-content'>
           <div className="main">
             <h1>Welcome to the ShapeStore</h1>
