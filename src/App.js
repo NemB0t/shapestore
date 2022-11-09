@@ -1,5 +1,5 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import './App.css';
+// import './App.css';
 import Checkout from './Components/Checkout';
 import Home from './Components/Home';
 import Navi from './Components/Navi';
@@ -9,7 +9,7 @@ import Footer from './Components/Footer';
 
 function App() {
   return (
-    <div className="App">
+    <div className="flex text-center flex-col">
       <BrowserRouter>
         <Navi/>
         <Routes>
