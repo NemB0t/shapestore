@@ -4,17 +4,160 @@
     height: 0;
     border-left: 50px solid transparent;
     border-right: 50px solid transparent;
-    border-bottom: 100px solid red;
+    border-bottom: 100px solid ;
     }
     
 
 .square {
     width: 100px;
     height: 100px;
-    background: red;
+    background: black;
   }
     
-  .shape{
-    height: 150px;
-    width: 150px;
+.circle {
+  width: 100px;
+  height: 100px;
+  background: black;
+  border-radius: 50%
 }
+
+.space-invader {
+  box-shadow: 0 0 0 1em red,
+  0 1em 0 1em red,
+  -2.5em 1.5em 0 .5em red,
+  2.5em 1.5em 0 .5em red,
+  -3em -3em 0 0 red,
+  3em -3em 0 0 red,
+  -2em -2em 0 0 red,
+  2em -2em 0 0 red,
+  -3em -1em 0 0 red,
+  -2em -1em 0 0 red,
+  2em -1em 0 0 red,
+  3em -1em 0 0 red,
+  -4em 0 0 0 red,
+  -3em 0 0 0 red,
+  3em 0 0 0 red,
+  4em 0 0 0 red,
+  -5em 1em 0 0 red,
+  -4em 1em 0 0 red,
+  4em 1em 0 0 red,
+  5em 1em 0 0 red,
+  -5em 2em 0 0 red,
+  5em 2em 0 0 red,
+  -5em 3em 0 0 red,
+  -3em 3em 0 0 red,
+  3em 3em 0 0 red,
+  5em 3em 0 0 red,
+  -2em 4em 0 0 red,
+  -1em 4em 0 0 red,
+  1em 4em 0 0 red,
+  2em 4em 0 0 red;
+  background: red;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  margin: 50px 0 70px 65px;
+}
+
+.pacman {
+  width: 0px;
+  height: 0px;
+  border-right: 50px solid transparent;
+  border-top: 50px solid rgb(255, 238, 0);
+  border-left: 50px solid rgb(255, 238, 0);
+  border-bottom: 50px solid rgb(255, 238, 0);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.egg {
+  display: block;
+  width: 126px;
+  height: 180px;
+  background-color: red;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+
+.cut-diamond {
+  border-style: solid;
+  border-color: transparent transparent red transparent;
+  border-width: 0 25px 25px 25px;
+  height: 0;
+  width: 50px;
+  box-sizing: content-box;
+  position: relative;
+  margin: 20px 0 50px 0;
+}
+.cut-diamond:after {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: red transparent transparent transparent;
+  border-width: 70px 50px 0 50px;
+}
+
+
+.infinity {
+  position: relative;
+  width: 212px;
+  height: 100px;
+  box-sizing: content-box;
+}
+.infinity:before,
+.infinity:after {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  border: 20px solid red;
+  border-radius: 50px 50px 0 50px;
+  transform: rotate(-45deg);
+}
+.infinity:after {
+  left: auto;
+  right: 0;
+  border-radius: 50px 50px 50px 0;
+  transform: rotate(45deg);
+}
+
+
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+}
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: red;
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.triangle-bottomleft {
+  width: 0;
+  height: 0;
+  border-bottom: 100px solid rgb(0, 153, 255);
+  border-right: 100px solid transparent;
+}
+
