@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import './shapes.css'
 // import './ShapeCard.css'
 import { clsx } from 'clsx';
@@ -5,6 +6,8 @@ import { clsx } from 'clsx';
 
 
 function ShapeCard(props) {
+  const [itemCount, setItemCount] = useState(1);
+
   const shapeclass = clsx(
     'flex-auto text-center',
     {
@@ -27,14 +30,46 @@ function ShapeCard(props) {
           <div className={shapeclass}></div>
           <div className='h-8'>$ {props.shape.price}</div>
       </div>
-      <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
+      {
+        props.rm || false?
+        <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
+          <div className='cursor-pointer border border-black rounded p-2 self-start'>
+            Remove item
+          </div>
+        </div>
+        :
+        <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
+          <div className='text-sm border border-black rounded cursor-pointer p-1'>Add to Cart</div>
+          <div className='flex justify-center items-center gap-2'>
+              <div className='border border-black rounded w-3 cursor-pointer' 
+              onClick={()=>{
+                setItemCount((prevItemCount)=>{
+                  if(prevItemCount==1){
+                    return 1;
+                  }
+                  return prevItemCount-1});
+              }}
+              >-</div>
+              <div className='quantity'>{itemCount}</div>
+              <div className='border border-black rounded w-3 cursor-pointer' 
+              onClick={()=>{
+                setItemCount((prevItemCount)=>{return prevItemCount+1});
+              }}
+              >+</div>
+          </div>
+        </div>
+      }
+      {/* <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
+          <div className='cursor-pointer border border-black rounded p-2 self-start'>
+            Remove item
+          </div>
           <div className='text-sm border border-black rounded cursor-pointer p-1'>Add to Cart</div>
           <div className='flex justify-center items-center gap-2'>
               <div className='border border-black rounded w-3 cursor-pointer'>-</div>
               <div className='quantity'>1</div>
               <div className='border border-black rounded w-3 cursor-pointer'>+</div>
           </div>
-      </div>
+      </div> */}
     </div>
   );
 }
