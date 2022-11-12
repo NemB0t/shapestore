@@ -9,7 +9,7 @@ function Navi() {
         <ul className="flex justify-center items-center gap-12">
             <li className="list-none"><Link to="/" className='no-underline'>Home</Link></li>
             <li className="list-none"><Link to="/store" className='no-underline'>Store</Link></li>
-            <li className="list-none"><Link to="/checkout" className='no-underline'>Checkout</Link></li>
+            <li className="list-none"><Link to="/checkout" className='no-underline'>Cart</Link></li>
         </ul>
     </nav>
     );
