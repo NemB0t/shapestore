@@ -1,4 +1,4 @@
-site Link: https://nemb0t.github.io/shapestore/
+Site Link: https://nemb0t.github.io/shapestore/
 
 This is my submision to the cart project in Odin project.
 
