@@ -157,7 +157,7 @@
 .triangle-bottomleft {
   width: 0;
   height: 0;
-  border-bottom: 100px solid rgb(0, 153, 255);
+  border-bottom: 100px solid rgb(4, 179, 48);
   border-right: 100px solid transparent;
 }
 

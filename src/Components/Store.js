@@ -3,7 +3,7 @@ import ShapeCard from './ShapeCard';
 // import './Store.css'
 
 
-function Store() {
+function Store(props) {
 
   const shapeArr = [
     {id:1,
@@ -52,7 +52,7 @@ function Store() {
           {shapeArr.filter(function(shape){
             return shape.type === 'std';
           }).map((shapec)=>{
-            return <ShapeCard shape={{id:shapec.id,name: shapec.name,price: shapec.price} } />;
+            return <ShapeCard shape={{id:shapec.id,name: shapec.name,price: shapec.price}} onAddItemChange = {props.onAddItemChange} />;
           })}
         </div>
         <div className='grid grid-cols-3 gap-4'>
@@ -60,7 +60,7 @@ function Store() {
           {shapeArr.filter(function(shape){
             return shape.type === 'premium';
           }).map((shapec)=>{
-            return <ShapeCard shape={{id:shapec.id,name: shapec.name,price: shapec.price} } />;
+            return <ShapeCard  shape={{id:shapec.id,name: shapec.name,price: shapec.price} } onAddItemChange = {props.onAddItemChange}/>;
           })}
         </div>
       </div>

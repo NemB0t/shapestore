@@ -22,6 +22,16 @@ function ShapeCard(props) {
     'infinity':props.shape.id===8,
     'heart':props.shape.id===9,
   })
+
+  const handleAddCart = ()=>{
+    props.onAddItemChange({
+      item:{id:props.shape.id,
+        name: props.shape.name,
+        price: props.shape.price},
+      count:itemCount,
+    })
+  };
+
   return (
     <div className="border-2 border-black h-56 w-44 text-left flex flex-col">
       <div className='flex-auto flex flex-col gap-1 pl-4'>
@@ -39,19 +49,19 @@ function ShapeCard(props) {
         </div>
         :
         <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
-          <div className='text-sm border border-black rounded cursor-pointer p-1'>Add to Cart</div>
+          <div className='text-sm border border-black rounded cursor-pointer p-1 select-none' onClick={handleAddCart}>Add to Cart</div>
           <div className='flex justify-center items-center gap-2'>
-              <div className='border border-black rounded w-3 cursor-pointer' 
+              <div className='border border-black rounded w-3 cursor-pointer select-none' 
               onClick={()=>{
                 setItemCount((prevItemCount)=>{
-                  if(prevItemCount==1){
+                  if(prevItemCount===1){
                     return 1;
                   }
                   return prevItemCount-1});
               }}
               >-</div>
               <div className='quantity'>{itemCount}</div>
-              <div className='border border-black rounded w-3 cursor-pointer' 
+              <div className='border border-black rounded w-3 cursor-pointer select-none' 
               onClick={()=>{
                 setItemCount((prevItemCount)=>{return prevItemCount+1});
               }}
