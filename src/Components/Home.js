@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 function Home() {
     return (
-      <div className='flex flex-auto justify-start text-left gap-4'>
-        <div className="pl-40 bg-orange-3000 pt-32">
+      <div className='flex md:flex-row flex-col flex-auto justify-start md:items-start items-center text-left gap-8'>
+        <div className=" md:pl-40 bg-orange-3000 pt-32">
           <div className='text-3xl font-semibold pb-3'>Welcome to the ShapeStore</div>
           <div className='text-2xl pb-2'>We serve all your shape needs</div>
           <div>Free home delivery. 

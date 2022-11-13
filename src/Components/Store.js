@@ -47,16 +47,16 @@ function Store(props) {
     return (
       <div className="flex-auto flex flex-col justify-center items-center pl-12 gap-4">
         <div className='text-4xl pr-80'>Shape's for Sale</div>
-        <div className='grid grid-cols-3 gap-4 justify-center'>
-          <div className='col-span-3 text-left text-2xl'>Standard Shapes</div>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+          <div className='col-span-2 md:col-span-3 text-left text-2xl'>Standard Shapes</div>
           {shapeArr.filter(function(shape){
             return shape.type === 'std';
           }).map((shapec)=>{
             return <ShapeCard shape={{id:shapec.id,name: shapec.name,price: shapec.price}} onAddItemChange = {props.onAddItemChange} />;
           })}
         </div>
-        <div className='grid grid-cols-3 gap-4'>
-          <div className='col-span-3 text-left text-2xl'>Premium Shapes</div>
+        <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
+          <div className='col-span-2 md:col-span-3 text-left text-2xl'>Premium Shapes</div>
           {shapeArr.filter(function(shape){
             return shape.type === 'premium';
           }).map((shapec)=>{
