@@ -43,7 +43,9 @@ function ShapeCard(props) {
       {
         props.rm || false?
         <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
-          <div className='cursor-pointer border border-black rounded p-2 self-start'>
+          <div className='cursor-pointer border border-black rounded p-2 self-start' onClick={()=>{
+            props.onRemoveItemChange(props.shape.id);
+          }}>
             Remove item
           </div>
         </div>
