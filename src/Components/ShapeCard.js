@@ -1,6 +1,5 @@
 import {useState} from 'react';
 import './shapes.css'
-// import './ShapeCard.css'
 import { clsx } from 'clsx';
 
 
@@ -43,7 +42,7 @@ function ShapeCard(props) {
       {
         props.rm || false?
         <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
-          <div className='cursor-pointer border border-black rounded p-2 self-start' onClick={()=>{
+          <div data-testid="removeBtn" className='cursor-pointer border border-black rounded p-2 self-start' onClick={()=>{
             props.onRemoveItemChange(props.shape.id);
           }}>
             Remove item
@@ -51,9 +50,9 @@ function ShapeCard(props) {
         </div>
         :
         <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
-          <div className='text-sm border border-black rounded cursor-pointer p-1 select-none' onClick={handleAddCart}>Add to Cart</div>
+          <div data-testid="addCartBtn" className='text-sm border border-black rounded cursor-pointer p-1 select-none' onClick={handleAddCart}>Add to Cart</div>
           <div className='flex justify-center items-center gap-2'>
-              <div className='border border-black rounded w-3 cursor-pointer select-none' 
+              <div data-testid="minusBtn" className='border border-black rounded w-3 cursor-pointer select-none' 
               onClick={()=>{
                 setItemCount((prevItemCount)=>{
                   if(prevItemCount===1){
@@ -63,7 +62,7 @@ function ShapeCard(props) {
               }}
               >-</div>
               <div className='quantity'>{itemCount}</div>
-              <div className='border border-black rounded w-3 cursor-pointer select-none' 
+              <div data-testid="plusBtn" className='border border-black rounded w-3 cursor-pointer select-none' 
               onClick={()=>{
                 setItemCount((prevItemCount)=>{return prevItemCount+1});
               }}
@@ -71,17 +70,6 @@ function ShapeCard(props) {
           </div>
         </div>
       }
-      {/* <div className='h-12 flex justify-between items-center pl-4 pr-4 text-center'>
-          <div className='cursor-pointer border border-black rounded p-2 self-start'>
-            Remove item
-          </div>
-          <div className='text-sm border border-black rounded cursor-pointer p-1'>Add to Cart</div>
-          <div className='flex justify-center items-center gap-2'>
-              <div className='border border-black rounded w-3 cursor-pointer'>-</div>
-              <div className='quantity'>1</div>
-              <div className='border border-black rounded w-3 cursor-pointer'>+</div>
-          </div>
-      </div> */}
     </div>
   );
 }

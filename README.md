@@ -1,17 +1,12 @@
-https://bscottnz.github.io/react-router-shopping-cart/#/didyoureally
+site Link: 
 
+This is my submision to the cart project in Odin project.
 
-Link: https://css-tricks.com/the-shapes-of-css/
+Inspired by: https://bscottnz.github.io/react-router-shopping-cart
 
-Normal:
-Triangle Up Shape
-Circle Shape
-Square Shape
+Shape CSS: https://css-tricks.com/the-shapes-of-css/
 
-Premium:
-Space Invader Shape
-Pac-Man Shape
-Egg Shape
-Cut Diamond Shape
-Infinity Shape
-Heart Shape
+Topics learned:
+- React Router Dom
+- Tailwind (extending and mixing normal CSS)
+- Conditional Class names using Clsx

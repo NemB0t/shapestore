@@ -1,8 +1,5 @@
 import ShapeCard from "./ShapeCard";
 import { Link } from "react-router-dom";
-// import './Checkout.css'
-
-
 
 function Checkout(props) {
   

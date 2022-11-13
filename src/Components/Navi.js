@@ -1,4 +1,3 @@
-// import './Navi.css';
 import { Link } from "react-router-dom";
 
 function Navi() {
