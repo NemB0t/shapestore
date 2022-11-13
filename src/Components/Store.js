@@ -45,8 +45,8 @@ function Store(props) {
     ];
 
     return (
-      <div className="flex-auto flex flex-col justify-center items-center pl-12 gap-4">
-        <div className='text-4xl pr-80'>Shape's for Sale</div>
+      <div className="flex-auto flex flex-col justify-center items-center sm:pl-12 gap-4">
+        <div className='text-4xl sm:pr-80'>Shape's for Sale</div>
         <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
           <div className='col-span-2 md:col-span-3 text-left text-2xl'>Standard Shapes</div>
           {shapeArr.filter(function(shape){

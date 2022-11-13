@@ -18,7 +18,7 @@ function Checkout(props) {
     <div className="flex-auto flex flex-col text-left p-4 gap-8">
       <div className="text-3xl font-semibold">Cart</div>
       {/* custom width */}
-      <div className=" pl-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-start gap-12 items-center lg:w-[60rem]">
+      <div className=" sm:pl-8 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-start gap-4 sm:gap-12 items-center lg:w-[60rem]">
         {
           props.sBList.map((sBitem)=>{
             return <ShapeCard shape={{id:sBitem.item.id,name: sBitem.item.name,price: sBitem.item.price*sBitem.count}} rm={true} onRemoveItemChange={props.onRemoveItemChange}/>;

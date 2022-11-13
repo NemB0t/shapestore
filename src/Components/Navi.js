@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Navi() {
     return (
-    <nav className="flex-initial flex justify-between items-center p-12 sticky top-0 bg-white border-b-2">
+    <nav className="flex-initial flex justify-between items-center p-4 sm:p-12 sticky top-0 bg-white border-b-2">
         <Link to="/" className='no-underline'>ShapeStore</Link>
 
         <ul className="flex justify-center items-center gap-12">
