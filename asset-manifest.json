@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/shapestore/static/css/main.720c5b59.css",
+    "main.js": "/shapestore/static/js/main.8046191e.js",
+    "static/js/787.d4561049.chunk.js": "/shapestore/static/js/787.d4561049.chunk.js",
+    "index.html": "/shapestore/index.html",
+    "main.720c5b59.css.map": "/shapestore/static/css/main.720c5b59.css.map",
+    "main.8046191e.js.map": "/shapestore/static/js/main.8046191e.js.map",
+    "787.d4561049.chunk.js.map": "/shapestore/static/js/787.d4561049.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.720c5b59.css",
+    "static/js/main.8046191e.js"
+  ]
+}
