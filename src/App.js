@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
+import { HashRouter,BrowserRouter,Routes,Route } from 'react-router-dom';
 import {useState} from 'react';
 // import './App.css';
 import Checkout from './Components/Checkout';
@@ -41,7 +41,7 @@ function App() {
   
   return (
     <div className="flex text-center flex-col h-full gap-4">
-      <BrowserRouter>
+      <HashRouter>
         <Navi/>
         <Routes>
           <Route path="/" element={<Home/>}/>
@@ -50,7 +50,7 @@ function App() {
           <Route path="/final" element={<Final/>}/>
         </Routes>
         <Footer/>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
